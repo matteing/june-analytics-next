@@ -1,6 +1,6 @@
 {
   "name": "@june-so/analytics-next",
-  "version": "1.35.2",
+  "version": "1.36.2",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/pkg/index.js",
@@ -20,7 +20,7 @@
     "build-prep": "echo \"// This file is generated.\\nexport const version = '$npm_package_version'\" > src/generated/version.ts",
     "version": "npm run build-prep && git add src/generated/version.ts",
     "umd": "webpack",
-    "pkg": "tsc",
+    "pkg": "tsc; webpack",
     "cjs": "tsc -p tsconfig.cjs.json",
     "run-example": "cd example && yarn && yarn dev",
     "clean": "rm -rf dist",
